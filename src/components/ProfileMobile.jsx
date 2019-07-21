@@ -15,23 +15,41 @@ const Container = styled.div`
   display: block;
 `
 
-const Logo = styled.div`
-  display: block;
-  position: absolute;
-  left: 50%;
+const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+`
+
+const MyAccount = styled.p`
+  font-size: 12px;
+`
+
+const Logo = styled.img`
   top: 25px;
-  img {
-    width: 50px;
-  }
+  left: 45vw;
+  margin: 0 auto;
+
+  width: 50px;
+`
+
+const Name = styled.h1`
+  margin-top: 5px;
+  color: #fff;
 `
 
 export default () => {
   return (
     <>
       <Container>
-        <Logo>
-          <img src={logo_grayscale} alt="logo" />
-        </Logo>
+        <NameContainer>
+          <Logo src={logo_grayscale} alt="logo" />
+          <Name>John Doe</Name>
+          <MyAccount>My account</MyAccount>
+        </NameContainer>
       </Container>
     </>
   )
