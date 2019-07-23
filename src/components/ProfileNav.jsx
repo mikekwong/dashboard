@@ -13,10 +13,12 @@ import contact from '../assets/contact.svg'
 import heart from '../assets/heart.svg'
 
 const Container = styled.div`
+  font-family: 'Roboto', 'Helvetica', sans-serif;
   background-color: #102345;
   display: block;
   width: 80%;
   height: 100vh;
+  box-shadow: 2px 1px 6px 0px rgba(0, 0, 0, 0.47);
 `
 
 const NameContainer = styled.div`
@@ -27,7 +29,8 @@ const NameContainer = styled.div`
 `
 
 const MyAccount = styled.p`
-  font-size: 12px;
+  font-size: 15px;
+  opacity: 0.5;
 `
 
 const Logo = styled.img`
@@ -37,8 +40,10 @@ const Logo = styled.img`
   width: 50px;
 `
 
-const Name = styled.h1`
-  margin-bottom: 5px;
+const Name = styled.p`
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 10px;
   color: #fff;
 `
 
@@ -49,19 +54,39 @@ const Line = styled.hr`
   opacity: 0.5;
 `
 
-const NavContainer = styled.nav`
+const AmountLogout = styled.div`
+  display: flex;
   flex-direction: row;
-  width: 90%;
+  color: #428be5;
+  justify-content: space-between;
+  margin: 0 20px;
+`
+
+const Logout = styled.p`
+  cursor: pointer;
+`
+const Amount = styled.p``
+
+const NavContainer = styled.nav``
+
+const Section = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
 `
 
 const Heart = styled.img`
-  justify-content: flex-start;
+  width: 10%;
+  margin-left: 20px;
 `
 
-const MyDashBoard = styled.p`
+const DashboardSection = styled.p`
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-left: 20px;
   color: #428be5;
   width: 40%;
-  margin: 0;
 `
 
 export default () => {
@@ -72,12 +97,42 @@ export default () => {
           <Logo src={logo_grayscale} alt="logo" />
           <Name>John Doe</Name>
           <MyAccount>My account</MyAccount>
-          <Line />
-          <NavContainer>
-            <Heart src={heart} alt="heart" />
-            <MyDashBoard>My Dashboard</MyDashBoard>
-          </NavContainer>
         </NameContainer>
+        <Line />
+        <AmountLogout>
+          <Amount>$0.00</Amount>
+          <Logout>Log Out</Logout>
+        </AmountLogout>
+        <NavContainer>
+          <Section>
+            <Heart src={heart} alt="heart" />
+            <DashboardSection>My Dashboard</DashboardSection>
+          </Section>
+          <Section>
+            <Heart src={heart} alt="heart" />
+            <DashboardSection>Store Locator</DashboardSection>
+          </Section>
+          <Section>
+            <Heart src={heart} alt="heart" />
+            <DashboardSection>Store Aisles</DashboardSection>
+          </Section>
+          <Section>
+            <Heart src={heart} alt="heart" />
+            <DashboardSection>Item Locator</DashboardSection>
+          </Section>
+          <Section>
+            <Heart src={heart} alt="heart" />
+            <DashboardSection>Cart</DashboardSection>
+          </Section>
+          <Section>
+            <Heart src={heart} alt="heart" />
+            <DashboardSection>Receipt</DashboardSection>
+          </Section>
+          <Section>
+            <Heart src={heart} alt="heart" />
+            <DashboardSection>Contact Us</DashboardSection>
+          </Section>
+        </NavContainer>
       </Container>
     </>
   )
