@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
-import ProfileMobile from './ProfileMobile'
+import ProfileNav from './ProfileNav'
 import ProfileDesktop from './ProfileDesktop'
 import { device } from '../constants/styles'
+import './App.css'
 
 const Container = styled.div`
   background: linear-gradient(#0c1a39, #84a5ef);
@@ -38,7 +39,7 @@ export default () => {
       <Reset />
       <Container>
         <Desktop>
-          <ProfileMobile />
+          <ProfileNav />
         </Desktop>
         <Mobile>
           <ProfileDesktop />
