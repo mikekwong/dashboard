@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo_grayscale from '../assets/logo_grayscale.svg'
-import heart from '../assets/heart.svg'
+import { fonts, colors } from '../../constants/styles'
+import logo_grayscale from '../../assets/logo_grayscale.svg'
+import heart from '../../assets/heart.svg'
+import navs from '../../navs.json'
 
 const Container = styled.div`
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  background-color: #102345;
+  ${fonts.roboto}
+  background: ${colors.navyBlue}
   display: block;
   width: 80%;
   height: 100vh;
@@ -13,7 +15,7 @@ const Container = styled.div`
 `
 
 const NameContainer = styled.div`
-  color: #fff;
+  color: ${colors.white};
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 20px;
@@ -35,7 +37,7 @@ const Name = styled.p`
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 10px;
-  color: #fff;
+  color: ${colors.white};
 `
 
 const Line = styled.hr`
@@ -48,7 +50,7 @@ const Line = styled.hr`
 const AmountLogout = styled.div`
   display: flex;
   flex-direction: row;
-  color: #428be5;
+  color: ${colors.mobileNavBlue};
   justify-content: space-between;
   margin: 0 20px;
 `
@@ -80,6 +82,14 @@ const DashboardSection = styled.p`
   width: 40%;
 `
 
+const BgBar = styled.div`
+  background: #428be5;
+  border-radius: 5px;
+  width: 90%;
+  height: 100%;
+  top: 0;
+`
+
 export default () => {
   return (
     <>
@@ -95,34 +105,16 @@ export default () => {
           <Logout>Log Out</Logout>
         </AmountLogout>
         <NavContainer>
-          <Section>
-            <Heart src={heart} alt="heart" />
-            <DashboardSection>My Dashboard</DashboardSection>
-          </Section>
-          <Section>
-            <Heart src={heart} alt="heart" />
-            <DashboardSection>Store Locator</DashboardSection>
-          </Section>
-          <Section>
-            <Heart src={heart} alt="heart" />
-            <DashboardSection>Store Aisles</DashboardSection>
-          </Section>
-          <Section>
-            <Heart src={heart} alt="heart" />
-            <DashboardSection>Item Locator</DashboardSection>
-          </Section>
-          <Section>
-            <Heart src={heart} alt="heart" />
-            <DashboardSection>Cart</DashboardSection>
-          </Section>
-          <Section>
-            <Heart src={heart} alt="heart" />
-            <DashboardSection>Receipt</DashboardSection>
-          </Section>
-          <Section>
-            <Heart src={heart} alt="heart" />
-            <DashboardSection>Contact Us</DashboardSection>
-          </Section>
+          {navs.map((nav, idx) => {
+            const { title } = nav
+            return (
+              <Section key={idx}>
+                <Heart src={heart} alt="heart" />
+                <DashboardSection>{title}</DashboardSection>
+                <BgBar />
+              </Section>
+            )
+          })}
         </NavContainer>
       </Container>
     </>

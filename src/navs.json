@@ -1,0 +1,30 @@
+[
+  {
+    "icon": "./assets/ellipse.svg",
+    "title": "My Dashboard"
+  },
+  {
+    "icon": "./assets/person.svg",
+    "title": "Store Locator"
+  },
+  {
+    "icon": "./assets/aisles.svg",
+    "title": "Store Aisles"
+  },
+  {
+    "icon": "./assets/item.svg",
+    "title": "Item Locator"
+  },
+  {
+    "icon": "./assets/cart.svg",
+    "title": "Cart"
+  },
+  {
+    "icon": "./assets/receipt.svg",
+    "title": "Receipt"
+  },
+  {
+    "icon": "./assets/contact.svg",
+    "title": "Contact Us"
+  }
+]
