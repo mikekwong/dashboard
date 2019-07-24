@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Deals from './DashboardSections/Deals'
 import Rewards from './DashboardSections/Rewards'
 import { colors, borderRadius } from '../../constants/styles'
 
@@ -26,6 +27,7 @@ export default () => {
       <DashboardMain>
         <Welcome>Welcome John!</Welcome>
         <Rewards />
+        <Deals />
       </DashboardMain>
     </>
   )

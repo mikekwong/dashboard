@@ -6,7 +6,7 @@ import progress_bar from '../../../assets/progress_bar.svg'
 const RewardsBox = styled.div`
   margin-left: 50px;
   margin-top: 20px;
-  width: 450px;
+  width: 420px;
   height: 170px;
   background: ${colors.darkBlue};
   border-radius: ${borderRadius}px;
@@ -26,13 +26,14 @@ const Title = styled.p`
 `
 
 const Progress = styled.img`
-  width: 400px;
+  width: 360px;
+  margin: 0 auto;
 `
 
 const Percent = styled.p`
   margin-top: 10px;
   position: relative;
-  left: 80px;
+  left: 69px;
 `
 
 const Status = styled.p`
@@ -46,12 +47,10 @@ export default () => {
   return (
     <>
       <RewardsBox>
-        <Container>
-          <Title>Rewards Bar</Title>
-          <Progress src={progress_bar} alt="progress" />
-          <Percent>60%</Percent>
-          <Status>You're almost there!</Status>
-        </Container>
+        <Title>Rewards Bar</Title>
+        <Progress src={progress_bar} alt="progress" />
+        <Percent>60%</Percent>
+        <Status>You're almost there!</Status>
       </RewardsBox>
     </>
   )

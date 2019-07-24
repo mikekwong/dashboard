@@ -40,7 +40,7 @@ const Logo = styled.div`
 const Section = styled.div`
   cursor: pointer;
   display: flex;
-  margin: 50px 0 20px 0;
+  margin: 35px 0 20px 0;
 `
 
 const Icon = styled.img`
