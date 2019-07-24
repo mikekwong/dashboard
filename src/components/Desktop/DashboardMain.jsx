@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Deals from './DashboardSections/Deals'
 import Rewards from './DashboardSections/Rewards'
+import Profile from './DashboardSections/Profile'
 import { colors, borderRadius } from '../../constants/styles'
 
 const DashboardMain = styled.div`
@@ -28,6 +29,7 @@ export default () => {
         <Welcome>Welcome John!</Welcome>
         <Rewards />
         <Deals />
+        <Profile />
       </DashboardMain>
     </>
   )

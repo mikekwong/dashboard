@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
 import ProfileNav from './Mobile/ProfileNav'
-import ProfileDesktop from './Desktop/ProfileDesktop'
+import DashboardDesktop from './Desktop/DashboardDesktop'
 import { device } from '../constants/styles'
 import './App.css'
 
@@ -42,7 +42,7 @@ export default () => {
           <ProfileNav />
         </Desktop>
         <Mobile>
-          <ProfileDesktop />
+          <DashboardDesktop />
         </Mobile>
       </Container>
     </div>
