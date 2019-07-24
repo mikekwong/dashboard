@@ -25,4 +25,7 @@ export const fonts = {
   roboto: css`
     font-family: 'Roboto', 'Helvetica', sans-serif;
   `,
+  asap: css`
+    font-family: 'Asap', 'Helvetica', sans-serif;
+  `,
 }

@@ -15,9 +15,6 @@ const RewardsBox = styled.div`
   justify-content: center;
   text-align: center;
 `
-
-const Container = styled.div``
-
 const Title = styled.p`
   text-align: center;
   font-size: 20px;

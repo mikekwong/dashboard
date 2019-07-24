@@ -6,10 +6,10 @@ import Profile from './DashboardSections/Profile'
 import { colors, borderRadius } from '../../constants/styles'
 
 const DashboardMain = styled.div`
-color: ${colors.white}
+  color: ${colors.white};
   border-radius: ${borderRadius}px;
   background: ${colors.opaqueBlue};
-  width: 1000px;
+  width: 870px;
   margin-top: 100px;
   position: absolute;
   left: 200px;

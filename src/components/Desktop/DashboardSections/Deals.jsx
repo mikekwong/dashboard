@@ -36,6 +36,7 @@ const CouponContainer = styled.div`
 `
 
 const Coupon = styled.img`
+  cursor: pointer;
   width: 190px;
   margin-bottom: -5px;
 `
