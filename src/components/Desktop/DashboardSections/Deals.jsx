@@ -14,19 +14,18 @@ const Deals = styled.div`
 `
 
 const Title = styled.p`
+  width: 365px;
+  border-bottom: 0.5px solid ${colors.white};
+  padding-bottom: 15px;
   position: relative;
   top: 20px;
   margin-top: 50px;
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   color: ${colors.white};
   font-size: 16px;
 `
 
-const Line = styled.hr`
-  margin: 0 auto;
-  width: 365px;
-`
 const CouponContainer = styled.div`
   margin-top: 15px;
   display: flex;
@@ -46,7 +45,6 @@ export default () => {
     <>
       <Deals>
         <Title>Deals For You</Title>
-        <Line />
         <CouponContainer>
           <Coupon src={burger_coupon} alt="Burger Coupon" />
           <Coupon src={burger_coupon} alt="Burger Coupon" />
