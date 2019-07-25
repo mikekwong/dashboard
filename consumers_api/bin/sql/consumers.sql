@@ -7,4 +7,4 @@ CREATE TABLE consumers (
 );
 
 INSERT INTO consumers (email, "phone number", "City/State/Zip", textalerts, "coupon selected")
-    VALUES ('john.doe@gmail.com', '(123) 567 8901', 'New York, NY 10013', TRUE, FALSE)
+    VALUES ('john.doe@gmail.com', '(123) 567 8901', 'New York, NY 10013', TRUE, FALSE);
