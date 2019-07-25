@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
 // import Nav from './Mobile/Nav'
+import consumerDB from '../../api/consumerDB'
 import DashboardDesktop from './Desktop/DashboardDesktop'
 import DashboardNav from './Mobile/DashboardNav'
 import { device } from '../constants/styles'
@@ -28,25 +29,34 @@ const Mobile = styled.div`
   }
 `
 
-// const Container = styled.div`
-//   background: linear-gradient(#285a8b, #797d81);
-//   width: 100vw;
-//   height: 100vh;
-// `
+export default class App extends Component {
+  state = {
+    profileInfo: [],
+  }
 
-export default () => {
-  return (
-    <div>
-      <Reset />
-      <Container>
-        <Desktop>
-          <DashboardDesktop />
-          {/* <ProfileNav /> */}
-        </Desktop>
-        <Mobile>
-          <DashboardNav />
-        </Mobile>
-      </Container>
-    </div>
-  )
+  async componentDidMount() {
+    try {
+      const { data } = await consumerDB.get('/consumers')
+      this.setState({ profileInfo: data })
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <Reset />
+        <Container>
+          <Desktop>
+            <DashboardDesktop profileInfo={...this.state.profileInfo}/>
+            {/* <ProfileNav /> */}
+          </Desktop>
+          <Mobile>
+            <DashboardNav profileInfo={...this.state.profileInfo}/>
+          </Mobile>
+        </Container>
+      </div>
+    )
+  }
 }

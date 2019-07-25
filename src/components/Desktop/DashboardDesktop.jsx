@@ -81,7 +81,7 @@ const NavContainer = styled.nav`
   }
 `
 
-export default () => {
+export default props => {
   return (
     <>
       <Container>
