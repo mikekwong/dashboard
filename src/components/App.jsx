@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
-import ProfileNav from './Mobile/ProfileNav'
+// import Nav from './Mobile/Nav'
 import DashboardDesktop from './Desktop/DashboardDesktop'
+import DashboardNav from './Mobile/DashboardNav'
 import { device } from '../constants/styles'
 import './App.css'
 
@@ -16,14 +17,14 @@ const Container = styled.div`
 `
 
 const Desktop = styled.div`
-  @media ${device.tabletDesktop} {
+  @media ${device.mobile} {
     display: none;
   }
 `
 const Mobile = styled.div`
-  display: none;
+  display: block;
   @media ${device.tabletDesktop} {
-    display: block;
+    display: none;
   }
 `
 
@@ -39,10 +40,11 @@ export default () => {
       <Reset />
       <Container>
         <Desktop>
-          <ProfileNav />
+          <DashboardDesktop />
+          {/* <ProfileNav /> */}
         </Desktop>
         <Mobile>
-          <DashboardDesktop />
+          <DashboardNav />
         </Mobile>
       </Container>
     </div>
