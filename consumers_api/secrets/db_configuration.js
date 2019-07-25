@@ -1,7 +1,7 @@
 module.exports = {
-  user: 'node_user',
+  user: 'postgres',
   host: 'localhost',
   database: 'consumersdb',
-  // password: 'node_password',
+  password: 'postgres',
   port: 5432,
 }

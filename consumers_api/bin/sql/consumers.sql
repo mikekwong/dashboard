@@ -1,4 +1,5 @@
 CREATE TABLE consumers (
+  id serial,
   email varchar(50),
   "phone number" varchar(14),
   "City/State/Zip" varchar(50),
