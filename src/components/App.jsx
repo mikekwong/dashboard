@@ -45,15 +45,16 @@ export default class App extends Component {
 
   render() {
     const { profileInfo } = this.state
+
     return (
       <div>
         <Reset />
         <Container>
           <Desktop>
             <DashboardDesktop {...profileInfo[0]} />
-            {/* <ProfileNav /> */}
           </Desktop>
           <Mobile>
+            {/* <Nav /> */}
             <DashboardNav {...profileInfo[0]} />
           </Mobile>
         </Container>

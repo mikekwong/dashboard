@@ -1,8 +1,8 @@
 import { css } from 'styled-components'
 
 const size = {
-  tabletDesktop: '400px',
-  mobile: '399px',
+  tabletDesktop: '401px',
+  mobile: '400px',
 }
 
 export const device = {

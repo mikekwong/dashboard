@@ -3,10 +3,7 @@ import styled from 'styled-components'
 import { colors, fonts } from '../../constants/styles'
 import myprofile from '../../assets/myprofile.svg'
 
-const MyProfile = styled.div`
-  /* margin-left: 500px;
-  margin-top: -465px; */
-`
+const MyProfile = styled.div``
 
 const StatusContainer = styled.div`
   ${fonts.roboto}
@@ -15,8 +12,8 @@ const StatusContainer = styled.div`
   flex-wrap: wrap;
   width: 300px;
   position: absolute;
-  top: 110px;
-  left: 40px;
+  top: 160px;
+  left: 60px;
 `
 
 const Title = styled.p`
@@ -39,8 +36,8 @@ const DetailsContainer = styled.div`
   flex-wrap: wrap;
   width: 300px;
   position: absolute;
-  top: 280px;
-  left: 28px;
+  top: 330px;
+  left: 50px;
   & :nth-child(1),
   & :nth-child(2) {
     margin-bottom: 30px;
@@ -67,7 +64,7 @@ const TextAlerts = styled(Email)`
 `
 
 const Card = styled.img`
-  margin: 80px 0 0 20px;
+  margin: 100px 0 15px 45px;
   width: 300px;
 `
 
