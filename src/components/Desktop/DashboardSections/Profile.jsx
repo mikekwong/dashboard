@@ -69,7 +69,7 @@ const Card = styled.img`
   width: 330px;
 `
 
-export default () => {
+export default ({ email, phone_number, city_state_zip }) => {
   return (
     <>
       <MyProfile>
@@ -81,9 +81,9 @@ export default () => {
           </RecentTransaction>
         </StatusContainer>
         <DetailsContainer>
-          <Email>john.doe@gmail.com</Email>
-          <Phone>(123) 567 8901</Phone>
-          <CityZip>New York, NY 10013</CityZip>
+          <Email>{email}</Email>
+          <Phone>{phone_number}</Phone>
+          <CityZip>{city_state_zip}</CityZip>
           <Empty>· · · · · ·</Empty>
           <TextAlerts>Text alerts activated</TextAlerts>
         </DetailsContainer>

@@ -81,7 +81,7 @@ const NavContainer = styled.nav`
   }
 `
 
-export default props => {
+export default ({ ...profileInfo }) => {
   return (
     <>
       <Container>
@@ -106,7 +106,7 @@ export default props => {
             )
           })}
         </NavContainer>
-        <DashboardMain />
+        <DashboardMain {...profileInfo} />
       </Container>
     </>
   )

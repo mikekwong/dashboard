@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
 // import Nav from './Mobile/Nav'
-import consumerDB from '../../api/consumerDB'
+import consumerDB from '../api/consumerDB'
 import DashboardDesktop from './Desktop/DashboardDesktop'
 import DashboardNav from './Mobile/DashboardNav'
 import { device } from '../constants/styles'
@@ -44,16 +44,17 @@ export default class App extends Component {
   }
 
   render() {
+    const { profileInfo } = this.state
     return (
       <div>
         <Reset />
         <Container>
           <Desktop>
-            <DashboardDesktop profileInfo={...this.state.profileInfo}/>
+            <DashboardDesktop {...profileInfo[0]} />
             {/* <ProfileNav /> */}
           </Desktop>
           <Mobile>
-            <DashboardNav profileInfo={...this.state.profileInfo}/>
+            <DashboardNav {...profileInfo[0]} />
           </Mobile>
         </Container>
       </div>

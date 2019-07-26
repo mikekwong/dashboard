@@ -22,14 +22,14 @@ const Welcome = styled.p`
   color: ${colors.white};
 `
 
-export default () => {
+export default ({ ...profileInfo }) => {
   return (
     <>
       <DashboardMain>
         <Welcome>Welcome John!</Welcome>
         <Rewards />
         <Deals />
-        <Profile />
+        <Profile {...profileInfo} />
       </DashboardMain>
     </>
   )
