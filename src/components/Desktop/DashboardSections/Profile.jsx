@@ -69,7 +69,7 @@ const Card = styled.img`
   width: 330px;
 `
 
-export default ({ email, phone_number, city_state_zip }) => {
+export default ({ profileInfo }) => {
   return (
     <>
       <MyProfile>
@@ -81,9 +81,14 @@ export default ({ email, phone_number, city_state_zip }) => {
           </RecentTransaction>
         </StatusContainer>
         <DetailsContainer>
-          <Email>{email}</Email>
-          <Phone>{phone_number}</Phone>
-          <CityZip>{city_state_zip}</CityZip>
+          {profileInfo && (
+            <>
+              <Email>{profileInfo.email}</Email>
+              <Phone>{profileInfo.phone_number}</Phone>
+              <CityZip>{profileInfo.city_state_zip}</CityZip>
+            </>
+          )}
+
           <Empty>· · · · · ·</Empty>
           <TextAlerts>Text alerts activated</TextAlerts>
         </DetailsContainer>

@@ -1,12 +1,23 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { Reset } from 'styled-reset'
 // import Nav from './Mobile/Nav'
 import consumerDB from '../api/consumerDB'
 import DashboardDesktop from './Desktop/DashboardDesktop'
 import DashboardNav from './Mobile/DashboardNav'
 import { device } from '../constants/styles'
-import './App.css'
+
+const GlobalStyles = createGlobalStyle`
+ html {
+   box-sizing: border-box;
+}
+
+ *,
+ *::before,
+ *::after {
+   box-sizing: inherit;
+}
+`
 
 const Container = styled.div`
   background: linear-gradient(#0c1a39, #84a5ef);
@@ -45,17 +56,17 @@ export default class App extends Component {
 
   render() {
     const { profileInfo } = this.state
-
     return (
       <div>
-        <Reset />
         <Container>
+          <Reset />
+          <GlobalStyles />
           <Desktop>
-            <DashboardDesktop {...profileInfo[0]} />
+            <DashboardDesktop profileInfo={profileInfo[0]} />
           </Desktop>
           <Mobile>
             {/* <Nav /> */}
-            <DashboardNav {...profileInfo[0]} />
+            <DashboardNav profileInfo={profileInfo[0]} />
           </Mobile>
         </Container>
       </div>
